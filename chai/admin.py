@@ -1,0 +1,16 @@
+from django.contrib import admin
+from .models import ChaiVarity, Store, ChaiCertificate
+
+class ChaiVarityAdmin(admin.ModelAdmin):
+    list_display = ('name', 'type', 'date_added')
+
+class StoreAdmin(admin.ModelAdmin):
+    list_display = ('name', 'location')
+    # filter_horizontal = ('chai_varieties',)
+
+class ChaiCertificateAdmin(admin.ModelAdmin):
+    list_display = ('chai', 'certificate_number')
+
+admin.site.register(ChaiVarity, ChaiVarityAdmin)
+admin.site.register(Store, StoreAdmin)
+admin.site.register(ChaiCertificate, ChaiCertificateAdmin)

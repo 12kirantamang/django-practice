@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+homepage
+{% endblock  %}
+{% block content %}
+<h1 class="bg-red-500 text-3xl">chai aur code | homepage</h1> 
+
+{% for chai in chais %}
+<div class="bg-blue-800 p-5">
+    
+    <img class="rounded" src="{{chai.image.url}}" alt="">
+    <h3>{{chai.name}}</h3>
+    
+</div>
+{% endfor  %}
+<h1>this is nav</h1>
+
+{% endblock%}
+
+
+
